@@ -1,0 +1,31 @@
+
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./bootstrap.min.css"></require>
+  <require from="./styles.css"></require>
+  <require from="./object-view"></require>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/project">
+        <i class="fa fa-user"></i>
+        <span>Thin Client</span>
+      </a>
+    </div>
+  </nav>
+
+  <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+
+    <div class="container">
+      <div class="row">
+        <div class = "col-md-12">
+          <connection-selector></connection-selector>
+        </div>
+      </div>
+    <div class="row">
+      <object-view class="col-md-4"></object-view>
+      <router-view class="col-md-8"></router-view>
+    </div>
+  </div>
+</template>
+

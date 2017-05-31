@@ -1,0 +1,17 @@
+<template>
+  <form class="form-inline ${validHostname ? '' : 'has-error'} has-feedback" submit.trigger="Connect()">
+      <label class="form-group control-label" for="hostname">Hostname:</label>
+      <div class="form-group">
+        <input type="text"
+               class="form-control"
+               id="hostname"
+               value.bind="hostname"
+               input.delegate="OnHostnameChanged ()">
+      </div>
+      <div class = "form-group">
+        <button type="connect" class="btn ${validHostname ? ' btn-primary' : 'btn-danger'}" disabled.bind = "!validHostname">
+            Connect
+        </button>
+      </div>
+  </form>
+</template>

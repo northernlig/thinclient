@@ -1,0 +1,22 @@
+<template>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <a route-href="route:project; params.bind:{path:parentPath}">
+        <h3 class="panel-title">
+          <img if.bind="selected != 'Project'" src="src\resources\chevron-up.svg">
+          ${selected}
+        </h3>
+      </a>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li repeat.for="object of objects" class="list-group-item">
+          <a route-href="route:project; params.bind:{path:getChildPath (object)}">
+            <h4 class="list-group-item-heading">${object.name}</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+

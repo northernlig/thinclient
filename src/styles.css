@@ -1,0 +1,57 @@
+body { padding-top: 70px; }
+
+section {
+  margin: 0 20px;
+}
+
+a:hover {
+  outline: none;
+  color: white;
+}
+
+.navbar-nav li.loader {
+    margin: 12px 24px 0 6px;
+}
+
+.no-selection {
+  margin: 20px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.panel {
+  padding: 5px;
+  margin: 10px;
+}
+
+.object-view {
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+.button-bar {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+.button-bar > button {
+  float: right;
+  margin: 20px;
+}
+
+li.list-group-item {
+  list-style: none;
+}
+
+li.list-group-item > a {
+  text-decoration: none;
+}
+
+div.panel-heading >  a {
+  text-decoration: none;
+}
